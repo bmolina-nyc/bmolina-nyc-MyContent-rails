@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'home', to: 'home#show' 
   get 'me', to: 'me#show', as: 'me'
 
+  #signup - jwt
+  get 'auth/login', to: 'authentication#authenticate'
+  get 'signup', to: 'users#create'
+
   root to: "home#show"
 
 end

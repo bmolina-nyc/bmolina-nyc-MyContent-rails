@@ -8,6 +8,10 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :last_name
       t.string :picture
 
+      #bcrypt
+      t.string :email_bcrypt
+      t.string :password_digest
+      
       t.timestamps
     end
   end
