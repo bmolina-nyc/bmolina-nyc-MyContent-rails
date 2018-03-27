@@ -1,5 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
+    #this is oauth authentication
     create_table :users do |t|
       t.string :provider
       t.string :uid
@@ -8,10 +9,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :last_name
       t.string :picture
 
-      #bcrypt
-      t.string :email_bcrypt
-      t.string :password_digest
-      
       t.timestamps
     end
   end

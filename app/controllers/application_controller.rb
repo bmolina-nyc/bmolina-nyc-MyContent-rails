@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-    # include Response
-    # include ExceptionHandler
       
     def authenticate
         redirect_to :login unless user_signed_in?
